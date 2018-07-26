@@ -9,6 +9,9 @@ TagManager:
   - Sbase
   - upperL
   - Basee
+  - CastleTag
+  - secondaryB
+  - mainbase
   layers:
   - Default
   - TransparentFX
