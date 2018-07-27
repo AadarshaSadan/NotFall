@@ -16,7 +16,17 @@ public class ObjRotate : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.position.x < Screen.width / 5)
+            {
+                velocidade += Time.deltaTime * 30f;
+            }
+            else if (touch.position.x > Screen.width / 5)
+            {
+                velocidade -= Time.deltaTime * 30f;
+            }
+        }
         if (Input.GetKey(KeyCode.D))
         {
             velocidade += Time.deltaTime*30f;

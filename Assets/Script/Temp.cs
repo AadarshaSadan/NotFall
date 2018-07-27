@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Temp : MonoBehaviour {
     public GameObject selectedObject;
+    private float doubleClickTime = 1.0f;
+    private float lastClickTime = -10f;
     // Use this for initialization
     void Start()
     {
@@ -14,22 +16,39 @@ public class Temp : MonoBehaviour {
     void Update()
     {
 
+
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo))
+            float timeDelta = Time.time - lastClickTime;
+
+            if (timeDelta < doubleClickTime)
             {
-                GameObject hitObject = hitInfo.transform.parent.gameObject;
-                if (hitObject.tag != "CastleTag")
-                    if(hitObject.tag!="mainbase")
-                        SelectObject(hitObject);
+                Debug.Log("double");
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitInfo;
+                if (Physics.Raycast(ray, out hitInfo))
+                {
+                    GameObject hitObject = hitInfo.transform.parent.gameObject;
+                    if (hitObject.tag != "CastleTag")
+                        if (hitObject.tag != "mainbase")
+                            SelectObject(hitObject);
+                }
+                else
+                {
+                    Debug.Log("notDestroy");
+                }
+                lastClickTime = 0;
             }
             else
             {
-                Debug.Log("notDestroy");
+                lastClickTime = Time.time;
             }
         }
+
+
+
+
+
     }
 
     void SelectObject(GameObject obj)

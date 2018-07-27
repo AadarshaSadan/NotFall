@@ -4,54 +4,62 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-  public Transform tempObj;
-
-	// Use this for initialization
-	void Start ()
+    public Material a;
+    //public Material b;
+    private float doubleClickTime = 1.0f;
+    private float lastClickTime = -10f;
+    private Renderer rnd;
+    // Use this for initialization
+    void Start()
     {
-		
-	}
+        rnd = GetComponent<Renderer>();
+        rnd.material = a;
+    }
 
     // Update is called once per frame
     void Update()
     {
-       
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit hitInfo;
-
-        if (Physics.Raycast(ray, out hitInfo,100f))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (hitInfo.collider!=null)
-            {
-                if (hitInfo.collider.transform.parent.name == "Orange")
-                {
-                    hitInfo.collider.transform.parent.gameObject.GetComponent<CurrentShape>().ChangeMaterialColr();
-                    tempObj = hitInfo.collider.transform;
-                    GameObject.Find("Purple").GetComponent<CurrentShape>().ResetMaterialColor();
-                }
-                else if (hitInfo.collider.transform.parent.name == "Purple")
-                {
-                    hitInfo.collider.transform.parent.gameObject.GetComponent<CurrentShape>().ChangeMaterialColr();
-                    tempObj = hitInfo.collider.transform;
-                    GameObject.Find("Orange").GetComponent<CurrentShape>().ResetMaterialColor();
-                }
+            float timeDelta = Time.time - lastClickTime;
 
-
-            }
-            else 
+            if (timeDelta < doubleClickTime)
             {
-                Debug.Log("nothing selected");
+               Debug.Log("double click");
+                lastClickTime = 0;
             }
-           
-                
-           
-          
+            else
+            {
+                lastClickTime = Time.time;
+            }
         }
-      
     }
 
-   
+    private void OnMouseEnter()
+    {
+        ColorAll(transform.parent.gameObject);
+    }
+
+    private void OnMouseExit()
+    {
+        ResetAll(transform.parent.gameObject);
+    }
+
+    void ColorAll(GameObject g)
+    {
+        for (int i = 0; i < g.transform.childCount; i++)
+        {
+            g.transform.GetChild(i).GetComponent<Renderer>().material.color = Color.white;
+        }
+    }
+
+    void ResetAll(GameObject g)
+    {
+        for (int i = 0; i < g.transform.childCount; i++)
+        {
+            g.transform.GetChild(i).GetComponent<Renderer>().material = a;
+        }
+    }
 
 
 }
