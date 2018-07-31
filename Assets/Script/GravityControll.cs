@@ -5,6 +5,8 @@ using UnityEngine;
 public class GravityControll : MonoBehaviour {
    public GameObject gravityobject;
     Rigidbody Rigid_object;
+    public float gravityScale = 0.8f;
+    public static float globalGravity = -9.81f;
     // Use this for initialization
     void Start() {
         AllcomponentStatue();
@@ -28,9 +30,9 @@ public class GravityControll : MonoBehaviour {
     }
     private void Statue(Rigidbody abc)
     {
-        abc.useGravity = true;
+        abc.useGravity = false;
         abc.isKinematic = true;
-        Physics.gravity *= -1;
+        
     }
 
     private void Move(Rigidbody abc)

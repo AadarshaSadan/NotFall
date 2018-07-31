@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Temp : MonoBehaviour {
     public GameObject selectedObject;
@@ -8,10 +9,14 @@ public class Temp : MonoBehaviour {
     private float lastClickTime = -10f;
     private Vector3 point;
     public ParticleSystem brust;
+   // public int scoreValue = 0;
+   // public Text score;
     // Use this for initialization
+
+        
     void Start()
     {
-
+        //score = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -32,8 +37,7 @@ public class Temp : MonoBehaviour {
                 {
                     GameObject hitObject = hitInfo.transform.parent.gameObject;
                     print(hitObject.tag);
-                    if (hitObject.tag != "CastleTag")
-                        if (hitObject.name != "MainBase")
+                    if (hitObject.tag != "CastleTag"&& hitObject.name != "MainBase")
                             SelectObject(hitObject);
                 }
                 else
@@ -70,8 +74,13 @@ public class Temp : MonoBehaviour {
             point = selectedObject.transform.GetChild(i).GetComponent<Transform>().position;
             //display burst effect to every cube
             burstDisplay(point);
+            // scoreValue += 5;
+            //score.text = scoreValue.ToString();
+           
+
         }
         Destroy(selectedObject);
+        FindObjectOfType<ScoreManager>().AddScore(5);
 
     }
 
@@ -83,7 +92,11 @@ public class Temp : MonoBehaviour {
         //brust.transform.rotation = new Quaternion();
        // Instantiate(explodedBubble, Pointget.point, Quaternion.identity);
         brust.Play();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+
     }
+
 
    
 }
