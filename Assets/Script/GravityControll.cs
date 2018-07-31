@@ -21,20 +21,22 @@ public class GravityControll : MonoBehaviour {
         }
         if(Input.GetMouseButtonUp(1))
         {
-            AllcomponentMove();
+            //AllcomponentMove();
+            AllcomponentStatue();
         }
 
     }
     private void Statue(Rigidbody abc)
     {
-        abc.useGravity = false;
+        abc.useGravity = true;
         abc.isKinematic = true;
+        Physics.gravity *= -1;
     }
 
     private void Move(Rigidbody abc)
     {
-        abc.useGravity = true;
-        abc.isKinematic = false;
+        //abc.useGravity = true;
+        //abc.isKinematic = false;
     }
 
     private void AllcomponentStatue()

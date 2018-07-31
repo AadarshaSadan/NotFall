@@ -6,6 +6,8 @@ public class Temp : MonoBehaviour {
     public GameObject selectedObject;
     private float doubleClickTime = 1.0f;
     private float lastClickTime = -10f;
+    private Vector3 point;
+    public ParticleSystem brust;
     // Use this for initialization
     void Start()
     {
@@ -29,8 +31,9 @@ public class Temp : MonoBehaviour {
                 if (Physics.Raycast(ray, out hitInfo))
                 {
                     GameObject hitObject = hitInfo.transform.parent.gameObject;
+                    print(hitObject.tag);
                     if (hitObject.tag != "CastleTag")
-                        if (hitObject.tag != "mainbase")
+                        if (hitObject.name != "MainBase")
                             SelectObject(hitObject);
                 }
                 else
@@ -60,9 +63,28 @@ public class Temp : MonoBehaviour {
         }
 
         selectedObject = obj;
-       Destroy(selectedObject);
 
+        for (int i = 0; i < selectedObject.transform.childCount; i++)
+        {
+
+            point = selectedObject.transform.GetChild(i).GetComponent<Transform>().position;
+            //display burst effect to every cube
+            burstDisplay(point);
+        }
+        Destroy(selectedObject);
+
+    }
+
+    private void burstDisplay(Vector3 Pointget)
+    {
+        //display in s
+        /// print(Pointget);
+        brust.transform.position = new Vector3(Pointget.x,Pointget.y,Pointget.z);
+        //brust.transform.rotation = new Quaternion();
+       // Instantiate(explodedBubble, Pointget.point, Quaternion.identity);
+        brust.Play();
     }
 
    
 }
+
