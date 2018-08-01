@@ -22,6 +22,7 @@ public class MouseHoverTest : MonoBehaviour {
     private void OnMouseEnter()
     {
         ColorAll(transform.parent.gameObject);
+        Debug.Log("hello");
     }
 
     private void OnMouseExit()
@@ -33,7 +34,9 @@ public class MouseHoverTest : MonoBehaviour {
     {
         for (int i = 0; i < g.transform.childCount; i++)
         {
+
             g.transform.GetChild(i).GetComponent<Renderer>().material.color=Color.white;
+            Debug.Log(g.transform.GetChild(i).name);
         }
     }
 

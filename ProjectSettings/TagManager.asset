@@ -12,6 +12,7 @@ TagManager:
   - CastleTag
   - secondaryB
   - mainbase
+  - Cash
   layers:
   - Default
   - TransparentFX

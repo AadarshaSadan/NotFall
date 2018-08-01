@@ -1,0 +1,2 @@
+A:\KARUWA\Project2\caseStudy\NotFall\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+A:\KARUWA\Project2\caseStudy\NotFall\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

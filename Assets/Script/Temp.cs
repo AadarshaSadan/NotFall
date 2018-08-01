@@ -30,19 +30,18 @@ public class Temp : MonoBehaviour {
 
             if (timeDelta < doubleClickTime)
             {
-                Debug.Log("double");
+                //Debug.Log("double");
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hitInfo;
                 if (Physics.Raycast(ray, out hitInfo))
                 {
-                    GameObject hitObject = hitInfo.transform.parent.gameObject;
-                    print(hitObject.tag);
-                    if (hitObject.tag != "CastleTag"&& hitObject.name != "MainBase")
+                    GameObject hitObject = hitInfo.transform.gameObject;
+                   // if (hitObject.tag != "CastleTag"&& hitObject.name != "MainBase")
                             SelectObject(hitObject);
                 }
                 else
                 {
-                    Debug.Log("notDestroy");
+                   // Debug.Log("notDestroy");
                 }
                 lastClickTime = 0;
             }
@@ -62,6 +61,7 @@ public class Temp : MonoBehaviour {
     {
         if (selectedObject != null)
         {
+             //Debug.Log("hit");
             if (obj == selectedObject)
                 return;
         }
@@ -72,25 +72,22 @@ public class Temp : MonoBehaviour {
         {
 
             point = selectedObject.transform.GetChild(i).GetComponent<Transform>().position;
-            //display burst effect to every cube
+            
             burstDisplay(point);
             // scoreValue += 5;
             //score.text = scoreValue.ToString();
            
 
         }
-        Destroy(selectedObject);
-        FindObjectOfType<ScoreManager>().AddScore(5);
+
+      //  FindObjectOfType<ScoreManager>().AddScore(5);
 
     }
 
     private void burstDisplay(Vector3 Pointget)
     {
-        //display in s
-        /// print(Pointget);
+        
         brust.transform.position = new Vector3(Pointget.x,Pointget.y,Pointget.z);
-        //brust.transform.rotation = new Quaternion();
-       // Instantiate(explodedBubble, Pointget.point, Quaternion.identity);
         brust.Play();
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();

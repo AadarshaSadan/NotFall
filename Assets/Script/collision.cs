@@ -10,13 +10,16 @@ public class collision : MonoBehaviour {
     public GameObject toptext;
     public GameObject score_all;
     public GameObject levelslider;
+    public AudioSource mainsound;
+    
     public Text fromscoremanager;
 
 
     private void Start()
     {
-        clickevent.GetComponent<Temp>();
-        rotate.GetComponent<ObjRotate>();
+        clickevent.GetComponent<DistroyObject>();
+        
+        
         //toptext.GetComponent<Text>();
     }
 
@@ -49,6 +52,7 @@ public class collision : MonoBehaviour {
         toptext.SetActive(false);
         score_all.SetActive(true);
         levelslider.SetActive(false);
+        mainsound.Stop();
 
         //rotate.SetActive(false);
     }
