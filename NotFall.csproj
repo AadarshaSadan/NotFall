@@ -315,16 +315,26 @@
     <Compile Include="Assets\Script\ForTest\GameController.cs" />
     <Compile Include="Assets\Script\ForTest\MouseHoverTest.cs" />
     <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\playControl.cs" />
     <Compile Include="Assets\Script\ScoreManager.cs" />
+    <Compile Include="Assets\Script\Selectplayer.cs" />
     <Compile Include="Assets\Script\Temp.cs" />
     <Compile Include="Assets\Script\TextUpdate.cs" />
     <Compile Include="Assets\Script\uiScene.cs" />
+    <Compile Include="Assets\timer.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\SetDirty.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UICornersGradient.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UIGradient.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UIGradientUtils.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UITextCornersGradient.cs" />
+    <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UITextGradient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Skybox Shaders\Gradient Skybox.shader" />
     <None Include="Assets\Skybox Shaders\Horizon With Sun Skybox.shader" />
     <None Include="Assets\Skybox Shaders\Horizontal Skybox.shader" />
     <None Include="Assets\Skybox Shaders\RGBM Cubed Skybox.shader" />
+    <None Include="Assets\Unity-UIGradient-master\ProjectSettings\ProjectVersion.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

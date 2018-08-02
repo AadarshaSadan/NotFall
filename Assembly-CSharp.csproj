@@ -69,11 +69,13 @@
     <Compile Include="Assets\Script\ForTest\GameController.cs" />
     <Compile Include="Assets\Script\ForTest\MouseHoverTest.cs" />
     <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\playControl.cs" />
     <Compile Include="Assets\Script\ScoreManager.cs" />
     <Compile Include="Assets\Script\Selectplayer.cs" />
     <Compile Include="Assets\Script\Temp.cs" />
     <Compile Include="Assets\Script\TextUpdate.cs" />
     <Compile Include="Assets\Script\uiScene.cs" />
+    <Compile Include="Assets\timer.cs" />
     <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\SetDirty.cs" />
     <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UICornersGradient.cs" />
     <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UIGradient.cs" />

@@ -362,6 +362,7 @@
     <None Include="Assets\Skybox Shaders\Horizon With Sun Skybox.shader" />
     <None Include="Assets\Skybox Shaders\Horizontal Skybox.shader" />
     <None Include="Assets\Skybox Shaders\RGBM Cubed Skybox.shader" />
+    <None Include="Assets\Unity-UIGradient-master\ProjectSettings\ProjectVersion.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

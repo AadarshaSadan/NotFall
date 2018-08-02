@@ -10,6 +10,7 @@ public class collision : MonoBehaviour {
     public GameObject toptext;
     public GameObject score_all;
     public GameObject levelslider;
+    public GameObject playerandtime;
     public AudioSource mainsound;
     
     public Text fromscoremanager;
@@ -53,6 +54,7 @@ public class collision : MonoBehaviour {
         score_all.SetActive(true);
         levelslider.SetActive(false);
         mainsound.Stop();
+        playerandtime.SetActive(false);
 
         //rotate.SetActive(false);
     }
