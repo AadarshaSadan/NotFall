@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour {
     public GameObject target = null;
     public bool orbitY = false;
     float velocidade;
-    float rotatespeed=15f;
+    float rotatespeed=40f;
 
     // Use this for initialization
     void Start () {
@@ -30,7 +30,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
                         velocidade -= Time.deltaTime * rotatespeed;
                     }
-                    else if (touch.position.x > ((Screen.width+(Screen.width)) / 5))
+                    else if (touch.position.x > (Screen.width-(Screen.width / 5)))
                     {
             
                         velocidade += Time.deltaTime * rotatespeed;
