@@ -12,8 +12,11 @@ public class ScoreManager : MonoBehaviour
     private bool gameover = false;
     public bool setlevel1=false;
     public bool setlevel2 = false;
+    public bool setlevel3 = false;
 
     public GameObject level1;
+    public GameObject level2obj1;
+    public GameObject level2obj2;
     private int selectlevel;
     Scene m_Scene;
 
@@ -31,9 +34,29 @@ public class ScoreManager : MonoBehaviour
         {
             setlevel1 = false;
             setlevel2 = true;
+            setlevel3 = false;
+            if (scoreCounter > 120 && setlevel2)
+            {
+                PlayerPrefs.SetInt("movetolevel3", 3);
+                SceneManager.LoadScene("Level3");
+                Destroy(level2obj1);
+                Destroy(level2obj2);
+              
+               
+            }
         }
+        
         if (m_Scene.name == "Game")
             setlevel1 = true;
+
+        if (m_Scene.name == "Level3")
+        {
+            setlevel3 = true;
+            gameSlider.value = 3;
+            //add level4 code here
+
+        }
+
 
         if (scoreCounter > 50 && setlevel1)
         {

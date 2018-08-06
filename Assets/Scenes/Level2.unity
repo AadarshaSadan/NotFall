@@ -3595,7 +3595,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.1564345, y: 0, z: 0, w: 0.98768836}
-  m_LocalPosition: {x: 6.7, y: 21.3, z: -43.1}
+  m_LocalPosition: {x: 6.7, y: 26.1, z: -44}
   m_LocalScale: {x: 1, y: 1.1304, z: 1}
   m_Children:
   - {fileID: 170076735}
@@ -6825,8 +6825,12 @@ MonoBehaviour:
   scoreText: {fileID: 406677311}
   scoreCounter: 0
   gameSlider: {fileID: 1740891285}
+  setlevel1: 0
   setlevel2: 0
-  level1: {fileID: 0}
+  setlevel3: 0
+  level1: {fileID: 1772513059}
+  level2obj1: {fileID: 1019881825}
+  level2obj2: {fileID: 1772513059}
 --- !u!4 &1098830697
 Transform:
   m_ObjectHideFlags: 0

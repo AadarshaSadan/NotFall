@@ -18,8 +18,8 @@ public class NewBehaviourScript : MonoBehaviour {
     void Update()
     {
         velocidade = 0f;
-        if (transform.position.y > 5 && transform.position.y < 25)
-        {
+       // if (transform.position.y > 5 && transform.position.y < 25)
+        
             if (target != null)
             {
                 // transform.LookAt(target.transform);
@@ -63,6 +63,6 @@ public class NewBehaviourScript : MonoBehaviour {
                 }
 
             }
-        }
+        
     }
 }
