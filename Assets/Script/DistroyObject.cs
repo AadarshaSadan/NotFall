@@ -33,15 +33,17 @@ public class DistroyObject : MonoBehaviour {
                     GameObject hitObject = hit.transform.gameObject;
                     // Debug.Log("hitobject =" + hitObject);
                     //Debug.Log(hitObject.tag);
-                    Debug.Log(hitObject.transform.parent);
+                    //Debug.Log(hitObject.transform.parent);
                     if (hitObject.transform.parent.name != "MainBase" && hitObject.transform.parent.name != "TowerTop")
                     {
                         Destroy(hitObject);
                         FindObjectOfType<ScoreManager>().AddScore(5);
+
                     }
-                        
+                   
 
                 }
+                
 
 
 
@@ -51,15 +53,19 @@ public class DistroyObject : MonoBehaviour {
             else
             {
                 lastClickTime = Time.time;
+               
             }
         }
-	}
-
+       
+    }
+  
 
     void DestroyGameObject()
     {
         Destroy(gameObject);
+       
     }
+
 
 
 }

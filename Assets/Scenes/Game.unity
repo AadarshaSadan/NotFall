@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42637712, g: 0.34431368, b: 0.30721802, a: 1}
+  m_IndirectSpecularColor: {r: 0.6052278, g: 0.4989727, b: 0.43304792, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -794,7 +794,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.22
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -813,7 +813,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -828,7 +828,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.3797595, y: 0.47535086, z: -0.2096045, w: 0.7654347}
-  m_LocalPosition: {x: -13.969999, y: 1.1855681, z: 17.690002}
+  m_LocalPosition: {x: -21.9, y: 11, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534669905}
@@ -2246,6 +2246,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669907}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: camrotate
   m_TagString: MainCamera
@@ -2307,13 +2308,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.1564345, y: 0, z: 0, w: 0.98768836}
-  m_LocalPosition: {x: 6.7, y: 20.2, z: -38.1}
+  m_LocalPosition: {x: 6.7, y: 21.3, z: -43.1}
   m_LocalScale: {x: 1, y: 1.1304, z: 1}
   m_Children:
   - {fileID: 170076735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 18, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9c8b2f56763004bbf61d6181b00fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeMagnetude: 0.05
+  shakeTime: 0.5
+  mainCamera: {fileID: 0}
+  shakeon: 0
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4209,6 +4225,9 @@ MonoBehaviour:
   scoreText: {fileID: 406677311}
   scoreCounter: 0
   gameSlider: {fileID: 1740891285}
+  setlevel1: 0
+  setlevel2: 0
+  level1: {fileID: 1772513059}
 --- !u!4 &1098830697
 Transform:
   m_ObjectHideFlags: 0

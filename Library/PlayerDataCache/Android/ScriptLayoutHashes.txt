@@ -4,6 +4,7 @@ A:/KARUWA/Project2/caseStudy/NotFall/run/notfall.apk
 SceneListBegin?
 Assets/Scenes/menu.unity
 Assets/Scenes/Game.unity
+Assets/Scenes/Level2.unity
 SceneListEnd?
 9c21e88753c35b552331b9f0c6a3048d Assembly-CSharp.dll:.SetDirty
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -90,7 +91,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-3560dda1ae0c8b0bbe499eb0f452354c Assembly-CSharp.dll:.ScoreManager
+5ae2913414928eb9a6fd60f924bd8509 Assembly-CSharp.dll:.ScoreManager
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 754551afe4f2531f58476bf14c510657 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -181,6 +182,8 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 304da4870828e2ac5280ab3188122ee4 Assembly-CSharp.dll:.MouseHoverTest
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+d077e0311d912ea4557718c25b463ef2 Assembly-CSharp.dll:.timer
 0483df29bc7955852f5690431c46b788 Assembly-CSharp.dll:.dis
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DistroyObject
-d077e0311d912ea4557718c25b463ef2 Assembly-CSharp.dll:.timer
+f09937c37b867f9f1f82fdfa62b128bc Assembly-CSharp.dll:.camup
+8451d09c1e1d32ae6628afccb7709c8f Assembly-CSharp.dll:.level2code

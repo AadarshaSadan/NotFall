@@ -14,23 +14,30 @@ public class collision : MonoBehaviour {
     public AudioSource mainsound;
     
     public Text fromscoremanager;
-
+    private void Update()
+    {
+       if(transform.position.y<10)
+        {
+           // Debug.Log("this is end");
+            stopallComponent();
+        }
+    }
 
     private void Start()
     {
         clickevent.GetComponent<DistroyObject>();
         
-        
+       
         //toptext.GetComponent<Text>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        print(gameObject.name + "was tiggred is" + collision.gameObject.tag);
+        //print(gameObject.name + "was tiggred is" + collision.gameObject.tag);
         //Debug.Log("gameover");
         if (collision.gameObject.tag == "mainbase")
         {
-            Debug.Log("hey game is over");
+            //Debug.Log("hey game is over");
             //
             stopallComponent();
            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -41,10 +48,7 @@ public class collision : MonoBehaviour {
      
       
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Tiggred");
-    }
+ 
 
    private void stopallComponent()
     {

@@ -61,9 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\level2code.cs" />
     <Compile Include="Assets\Script\ChangeColor.cs" />
     <Compile Include="Assets\Script\collision.cs" />
     <Compile Include="Assets\Script\DistroyObject.cs" />
+    <Compile Include="Assets\Script\ForTest\camup.cs" />
     <Compile Include="Assets\Script\ForTest\CurrentShape.cs" />
     <Compile Include="Assets\Script\ForTest\dis.cs" />
     <Compile Include="Assets\Script\ForTest\GameController.cs" />
