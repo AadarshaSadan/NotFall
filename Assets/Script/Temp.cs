@@ -9,14 +9,9 @@ public class Temp : MonoBehaviour {
     private float lastClickTime = -10f;
     private Vector3 point;
     public ParticleSystem brust;
-   // public int scoreValue = 0;
-   // public Text score;
-    // Use this for initialization
-
-        
+    
     void Start()
     {
-        //score = GetComponent<Text>();
     }
 
     // Update is called once per frame

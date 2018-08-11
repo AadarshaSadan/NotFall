@@ -20,10 +20,6 @@ public class DistroyObject : MonoBehaviour {
 
             if (timeDelta < doubleClickTime)
             {
-
-
-
-
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
 

@@ -16,7 +16,7 @@ public class collision : MonoBehaviour {
     public Text fromscoremanager;
     private void Update()
     {
-       if(transform.position.y<10)
+       if(transform.position.y<8)
         {
            // Debug.Log("this is end");
             stopallComponent();

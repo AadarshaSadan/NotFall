@@ -23,7 +23,9 @@ public class ScoreManager : MonoBehaviour
     // Use this for initialization
     void Start () {
         m_Scene = SceneManager.GetActiveScene();
-      
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+
     }
 	
 	// Update is called once per frame
@@ -35,12 +37,13 @@ public class ScoreManager : MonoBehaviour
             setlevel1 = false;
             setlevel2 = true;
             setlevel3 = false;
+            gameSlider.value = 2;
             if (scoreCounter > 120 && setlevel2)
             {
                 PlayerPrefs.SetInt("movetolevel3", 3);
                 SceneManager.LoadScene("Level3");
-                Destroy(level2obj1);
-                Destroy(level2obj2);
+               // Destroy(level2obj1);
+               // Destroy(level2obj2);
               
                
             }
@@ -58,12 +61,14 @@ public class ScoreManager : MonoBehaviour
         }
 
 
-        if (scoreCounter > 50 && setlevel1)
+        if (scoreCounter > 55 && setlevel1)
         {
-            Destroy(level1);
-            PlayerPrefs.SetInt("movetolevel2", 2);
-            SceneManager.LoadScene("Level2");
-            gameSlider.value = 2;
+            
+             Destroy(level1);
+            
+           PlayerPrefs.SetInt("movetolevel2", 2);
+           SceneManager.LoadScene("Level2");
+            
         }
 
 
