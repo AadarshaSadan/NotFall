@@ -11,7 +11,8 @@ public class timer : MonoBehaviour {
 
     public bool player2state = false;
     public bool player1state=true;
-    
+
+    public int s = 1;
     //public GameObject setplayer;
 
 	// Use this for initialization
@@ -32,12 +33,13 @@ public class timer : MonoBehaviour {
         
 	}
 
-    private void ResetTimer()
+    public void ResetTimer()
     {
         
-        if (theTime < 0)
+        if (theTime <= 0)
         {
             theTime = 10;
+            s = s + 1;
         }
 
         theTime -= Time.deltaTime;    // string seconds = (theTime % 60).ToString("f0");

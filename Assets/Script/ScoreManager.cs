@@ -20,6 +20,10 @@ public class ScoreManager : MonoBehaviour
     private int selectlevel;
     Scene m_Scene;
 
+    //
+    public GameObject player1;
+    public GameObject player2;
+
     // Use this for initialization
     void Start () {
         m_Scene = SceneManager.GetActiveScene();
@@ -38,7 +42,7 @@ public class ScoreManager : MonoBehaviour
             setlevel2 = true;
             setlevel3 = false;
             gameSlider.value = 2;
-            if (scoreCounter > 120 && setlevel2)
+            if (scoreCounter > 100 && setlevel2)
             {
                 PlayerPrefs.SetInt("movetolevel3", 3);
                 SceneManager.LoadScene("Level3");
@@ -56,6 +60,16 @@ public class ScoreManager : MonoBehaviour
         {
             setlevel3 = true;
             gameSlider.value = 3;
+            if(scoreCounter>40 && setlevel3)
+            {
+                setlevel1 = false;
+                setlevel2 = false;
+                setlevel3 = true;
+                PlayerPrefs.SetInt("movetolevel40", 4);
+                Debug.Log("write code for level4");
+                  
+
+            }
             //add level4 code here
 
         }
@@ -80,7 +94,15 @@ public class ScoreManager : MonoBehaviour
         scoreCounter += score;
         scoreText.text = scoreCounter.ToString();
         FindObjectOfType<collision>().AddScoretext(scoreCounter);
-      
+
+        if (player1.activeInHierarchy)
+        {
+          player1.GetComponent<play1>().AddScore(score);
+        }
+        else if (player2.activeInHierarchy)
+        {
+            player2.GetComponent<play2>().AddScore(score);
+        }
     }
 
     public void loadMenu()

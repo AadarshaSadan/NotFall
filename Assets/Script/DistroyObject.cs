@@ -5,7 +5,7 @@ using UnityEngine;
 public class DistroyObject : MonoBehaviour {
     private float doubleClickTime = 1.0f;
     private float lastClickTime = -10f;
-   
+ 
     // Use this for initialization
     void Start () {
         
@@ -13,6 +13,8 @@ public class DistroyObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,6 +63,8 @@ public class DistroyObject : MonoBehaviour {
         Destroy(gameObject);
        
     }
+
+    
 
 
 

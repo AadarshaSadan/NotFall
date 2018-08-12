@@ -11,8 +11,8 @@ public class playControl : MonoBehaviour {
     public GameObject offtimerforsingle;
     // Use this for initialization
     void Start () {
-        numberofplayer = PlayerPrefs.GetInt("numberofplayer");
-        AddPlayer(numberofplayer);
+       numberofplayer = PlayerPrefs.GetInt("numberofplayer");
+      //  AddPlayer(numberofplayer);
         if(numberofplayer==2)
         {
             twoplayer = true;

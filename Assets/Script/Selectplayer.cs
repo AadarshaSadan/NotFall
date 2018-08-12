@@ -5,6 +5,7 @@ using UnityEngine;
 public class Selectplayer : MonoBehaviour {
     public bool Single_player;
     public bool Two_player;
+  
 	// Use this for initialization
 	void Start () {
 		
