@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class collision : MonoBehaviour {
     public GameObject tower;
-    public GameObject clickevent;
     public GameObject rotate;
     public GameObject toptext;
     public GameObject score_all;
@@ -18,18 +17,12 @@ public class collision : MonoBehaviour {
     {
        if(transform.position.y<8)
         {
-           // Debug.Log("this is end");
             stopallComponent();
         }
     }
 
     private void Start()
-    {
-        clickevent.GetComponent<DistroyObject>();
-        
-       
-        //toptext.GetComponent<Text>();
-    }
+    {}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -53,7 +46,7 @@ public class collision : MonoBehaviour {
    private void stopallComponent()
     {
        
-        clickevent.SetActive(false);
+        //clickevent.SetActive(false);
         toptext.SetActive(false);
         score_all.SetActive(true);
         levelslider.SetActive(false);

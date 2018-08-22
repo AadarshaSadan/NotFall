@@ -110,6 +110,10 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Script\collision.cs" />
     <Compile Include="Assets\Script\DistroyObject.cs" />
+    <Compile Include="Assets\Script\ForTest\serilize.cs" />
+    <Compile Include="Assets\Script\hint\mouse.cs" />
+    <Compile Include="Assets\Script\hint\rotatee.cs" />
+    <Compile Include="Assets\Script\levelmanager.cs" />
     <Compile Include="Assets\Script\mouseColor.cs" />
     <Compile Include="Assets\Script\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\playControl.cs" />
@@ -119,6 +123,7 @@
     <Compile Include="Assets\Script\TextUpdate.cs" />
     <Compile Include="Assets\Script\timer.cs" />
     <Compile Include="Assets\Script\uiScene.cs" />
+    <Compile Include="Assets\switchanimation.cs" />
     <Compile Include="Assets\twoplayerControl.cs" />
     <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\SetDirty.cs" />
     <Compile Include="Assets\Unity-UIGradient-master\Assets\Scripts\UICornersGradient.cs" />

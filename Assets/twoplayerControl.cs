@@ -29,6 +29,7 @@ public class twoplayerControl : MonoBehaviour {
     public int h;
     public int k;
     public int temp=5;
+    public int value;
 
     //
    
@@ -41,8 +42,8 @@ public class twoplayerControl : MonoBehaviour {
             twoplayergame = true;
             playercontrol.SetActive(true);
         }
-            
 
+        RandomNumber();
         playeronescore = 0;
         playertwoscore = 0;
 	}
@@ -98,5 +99,18 @@ public class twoplayerControl : MonoBehaviour {
     public void AddPlayer(int number)
     {
         playercount.text = number.ToString();
+    }
+
+    
+  public void RandomNumber()
+    {
+
+
+        int[] integers = new int[] { 1, 5, 8, 9, 12 };
+
+
+     int randValue = Random.Range(0, integers.Length);
+        value = integers[randValue];
+        
     }
 }

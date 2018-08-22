@@ -5,7 +5,8 @@ using UnityEngine;
 public class DistroyObject : MonoBehaviour {
     private float doubleClickTime = 1.0f;
     private float lastClickTime = -10f;
- 
+    public bool destroyobj;
+
     // Use this for initialization
     void Start () {
         
@@ -22,6 +23,8 @@ public class DistroyObject : MonoBehaviour {
 
             if (timeDelta < doubleClickTime)
             {
+                if(destroyobj)
+                { 
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
 
@@ -38,15 +41,18 @@ public class DistroyObject : MonoBehaviour {
                         FindObjectOfType<ScoreManager>().AddScore(5);
 
                     }
-                   
+
 
                 }
-                
+
 
 
 
 
                 lastClickTime = 0;
+
+
+            }
             }
             else
             {
